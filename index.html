@@ -1,0 +1,257 @@
+```html
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo Chique - Moda Exclusiva</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #222;
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav h1 {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e91e63;
+        }
+
+        /* Banner Principal */
+        .hero {
+            height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #c2185b;
+        }
+
+        /* Seção de Produtos */
+        .products {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 1rem;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #222;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            font-size: 1.2rem;
+            padding: 1rem;
+            color: #222;
+        }
+
+        .product-card p {
+            padding: 0 1rem 1rem;
+            color: #666;
+        }
+
+        .product-card .price {
+            font-weight: bold;
+            color: #e91e63;
+            padding: 0 1rem 1rem;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Estilo Chique</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Produtos</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Coleção Outono 2025</h2>
+            <p>Descubra as últimas tendências em moda com estilo e sofisticação</p>
+            <button>Ver Coleção</button>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <h2>Nossos Produtos</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f" alt="Vestido Elegante">
+                <h3>Vestido Elegante</h3>
+                <p>Vestido perfeito para ocasiões especiais</p>
+                <p class="price">R$ 299,90</p>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1496747611176-843d5f69755e" alt="Jaqueta Moderna">
+                <h3>Jaqueta Moderna</h3>
+                <p>Jaqueta estilosa para o dia a dia</p>
+                <p class="price">R$ 199,90</p>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" alt="Calça Casual">
+                <h3>Calça Casual</h3>
+                <p>Conforto e estilo em uma única peça</p>
+                <p class="price">R$ 149,90</p>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1521335625578-3bffc6c19647" alt="Acessórios">
+                <h3>Acessórios Chique</h3>
+                <Muhammad Ali 10/23/2024
+                <p>Detalhes que complementam o look</p>
+                <p class="price">R$ 89,90</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Estilo Chique. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
+```
